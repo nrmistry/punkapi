@@ -1,0 +1,57 @@
+@use "./styles/variables" as *;
+
+.app {
+    display: grid;
+    grid-template-columns: 200px 1fr; 
+    background-color:rgb(18, 170, 230);
+  }
+
+.sidebar {
+    width: 200px;
+    background-color: rgba(185, 185, 227, 0.626); 
+    color: #fff; 
+    padding: 20px; 
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); 
+  }
+
+
+  .pagination-controls {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    position: fixed;
+    bottom: 10px; 
+    width: 100%;
+    padding: 10px;
+    font-family: $font-family2;
+  
+        &__buttons {
+            margin: 5px -5px;
+            padding: 8px 10px;
+            font-size: 12px;
+            cursor: pointer;
+            border-radius: 10px;
+        }   
+  
+        &__span {
+            font-size: 14px;
+            margin: 0 10px;
+            padding:4px;
+        }
+  }
+
+  @media screen and (max-width: 600px) {
+    .app {
+        grid-template-columns: 1fr; 
+    }
+
+    .sidebar {
+        width: 100vh;
+        box-shadow: none;
+        height: 300px;
+    }
+
+    .pagination-controls {
+        position: static;
+    }
+}
