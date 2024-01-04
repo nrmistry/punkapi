@@ -1,0 +1,14 @@
+ @use "../../styles/variables" as *;
+
+ .navbar {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: $font-family2;
+
+    &__title {
+        color: black;
+        font-family: $font-family1;
+        font-size: 50px;
+    }
+ }
